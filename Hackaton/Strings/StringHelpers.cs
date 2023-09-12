@@ -6,12 +6,16 @@ namespace Hackaton
     {
         public static string Abbreviate(string source, int maxLength)
         {
+            //Maria
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Abbreviate is not implemented!");
         }
 
         public static string Capitalize(string source)
         {
+            //Milen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Capitalize is not implemented!");
         }
@@ -25,48 +29,64 @@ namespace Hackaton
         /// <author>Kiril Stanoev</author>
         public static string Concat(string string1, string string2)
         {
+            //Plamen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Concat is not implemented!");
         }
 
         public static bool Contains(string source, char symbol)
         {
+            //Yasen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Contains is not implemented!");
         }
 
         public static bool StartsWith(string source, char target)
         {
+            //Alex
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: StartsWith is not implemented!");
         }
 
         public static bool EndsWith(string source, char target)
         {
+            //Ivan
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: EndsWith is not implemented!");
         }
 
         public static int FirstIndexOf(string source, char target)
         {
+            //Maria
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: FirstIndexOf is not implemented!");
         }
 
         public static int LastIndexOf(string source, char symbol)
         {
+            //Milen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: LastIndexOf is not implemented!");
         }
 
         public static string Pad(string source, int length, char paddingSymbol)
         {
+            //Plamen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Pad is not implemented!");
         }
 
         public static string PadEnd(string source, int length, char paddingSymbol)
         {
+            //Yasen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: PadEnd is not implemented!");
         }
@@ -79,12 +99,16 @@ namespace Hackaton
 
         public static string Repeat(string source, int times)
         {
+            //Milen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Repeat is not implemented!");
         }
 
         public static string Reverse(string source)
         {
+            //Plamen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Reverse is not implemented!");
         }

@@ -13,84 +13,112 @@ namespace Hackaton
         /// <author>Kiril Stanoev</author>
         public static int[] AddFirst(int[] source, int element)
         {
+            //alex
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: AddFirst is not implemented!");
         }
 
         public static int[] AddLast(int[] source, int element)
         {
+            //Ivan
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: AddLast is not implemented!");
         }
 
         public static int[] AppendAll(int[] source, int[] elements)
         {
+            //Maria
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: AppendAll is not implemented!");
         }
 
         public static int[] InsertAt(int[] source, int index, int element)
         {
+            //Milen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: InsertAt is not implemented!");
         }
 
         public static bool Contains(int[] source, int element)
         {
+            //Plamen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Contains is not implemented!");
         }
 
         public static void Copy(int[] sourceArray, int[] destinationArray, int count)
         {
+            //Yasen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Copy is not implemented!");
         }
 
         public static void CopyFrom(int[] sourceArray, int sourceStartIndex, int[] destinationArray, int destStartIndex, int count)
         {
+            //Alex
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: CopyFrom is not implemented!");
         }
 
         public static void Fill(int[] source, int element)
         {
+            //Ivan
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Fill is not implemented!");
         }
 
         public static int FirstIndexOf(int[] source, int target)
         {
+            //Maria
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: FirstIndexOf is not implemented!");
         }
 
         public static int LastIndexOf(int[] source, int target)
         {
+            //Milen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: LastIndexOf is not implemented!");
         }
 
         public static bool IsValidIndex(int[] source, int index)
         {
+            //Plamen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: IsValidIndex is not implemented!");
         }
 
         public static int[] RemoveAllOccurrences(int[] source, int element)
         {
+            //Yasen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: RemoveAllOccurrences is not implemented!");
         }
 
         public static void Reverse(int[] arrayToReverse)
         {
+            //Alex
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Reverse is not implemented!");
         }
 
         public static int[] Section(int[] source, int startIndex, int endIndex)
         {
+            //Ivan
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Section is not implemented!");
         }
