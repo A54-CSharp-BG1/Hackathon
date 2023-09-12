@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Hackaton
 {
@@ -20,26 +19,12 @@ namespace Hackaton
             throw new NotImplementedException("Error: AddFirst is not implemented!");
         }
 
-        /// <summary>
-        /// Adds the int element at the end of the array source.
-        /// </summary>
-        /// <param name="source">The array to add to</param>
-        /// <param name="element">The element to add</param>
-        /// <returns>A new array that has all the elements from the original array and the added element at last position.</returns>
-        /// <author>Ivan Uzunov</author>
         public static int[] AddLast(int[] source, int element)
         {
-            int[] newSource = new int[source.Length + 1];
-            for (int i = 0; i < source.Length + 1; i++)
-            {
-                if(i < source.Length)
-                {
-                    newSource[i] = source[i];
-                }
-                else newSource[i] = element;
-            }
-            source = newSource;
-            return source;
+            //Ivan
+
+            // Remove the line below then add your implementation.
+            throw new NotImplementedException("Error: AddLast is not implemented!");
         }
 
         public static int[] AppendAll(int[] source, int[] elements)
@@ -82,19 +67,12 @@ namespace Hackaton
             throw new NotImplementedException("Error: CopyFrom is not implemented!");
         }
 
-        /// <summary>
-        /// Adds only the int element at every position in the array source.
-        /// </summary>
-        /// <param name="source">The array to add to</param>
-        /// <param name="element">The element to add</param>
-        /// <returns>The new array is filled with only the element passed as a parameter.</returns>
-        /// <author>Ivan Uzunov</author>
         public static void Fill(int[] source, int element)
         {
-            for (int i = 0; i < source.Length; i++)
-            {
-                source[i] = element;
-            }
+            //Ivan
+
+            // Remove the line below then add your implementation.
+            throw new NotImplementedException("Error: Fill is not implemented!");
         }
 
         public static int FirstIndexOf(int[] source, int target)
@@ -136,51 +114,13 @@ namespace Hackaton
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Reverse is not implemented!");
         }
-        /// <summary>
-        /// Create a new array that contains a section of the previous one.
-        /// </summary>
-        /// <param name="source">The array to add to</param>
-        /// <param name="startIndex">The index where the section starts from</param>
-        /// <param name="endIndex">The index where the section ends</param>
-        /// <returns>A new array that contains only a section of the previous array with indexes that are passed as parameters.</returns>
-        /// <author>Ivan Uzunov</author>
+
         public static int[] Section(int[] source, int startIndex, int endIndex)
-        {  
-            List<int> newSource = new List<int>();
-            if (endIndex < source.Length && startIndex < endIndex)
-            {
-                for (int i = startIndex; i <= endIndex; i++)
-                {
-                    newSource.Add(source[i]);
-                    int temp = source[i];
-                }
-            }
-            else if (endIndex >= source.Length && startIndex < endIndex)
-            {
-                for (int i = startIndex; i < source.Length; i++)
-                {
-                    newSource.Add(source[i]);
-                }
-            }
-            else if (startIndex > endIndex)
-            {
-                for (int i = 0; i < source.Length; i++)
-                {
-                    newSource.Add(source[i]);
-                }
-            }
-            int[] source2 = new int[newSource.Count];
-            for (int i = 0; i < newSource.Count; i++)
-            {
-                source2[i] = newSource[i];
-                int newSourceTemp = newSource[i];
-            }
-            source = source2;
-            foreach (int i in source)
-            {
-                Console.Write(i + ", ");
-            }
-            return source;
+        {
+            //Ivan
+
+            // Remove the line below then add your implementation.
+            throw new NotImplementedException("Error: Section is not implemented!");
         }
     }
 }
