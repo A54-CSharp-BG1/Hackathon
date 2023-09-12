@@ -109,27 +109,45 @@ namespace Hackaton
                     return true;
                 }
             }
-
             return false;
         }
-
+        /// <summary>
+        /// Copies a certain amount of int elements from one array onto another starting from the first position of the array
+        /// </summary>
+        /// <param name="sourceArray">The source array that is going to get copied</param>
+        /// <param name="destinationArray">The destination of the new copy</param>
+        /// <param name="count">The amount of parameters that will get copied</param>
+        /// <author>Yasen Velinov</author>p
         public static void Copy(int[] sourceArray, int[] destinationArray, int count)
-        {
-            //Yasen
+            {
+                count = Math.Min(count, destinationArray.Length);
+                count = Math.Min(sourceArray.Length, count);
+                for (int i = 0; i < count; i++)
+            {
+                destinationArray[i] = sourceArray[i];
+            }
+            }
+            
+            /// <summary>
+            /// Copy certain amount of int elements from an array from certain position onto another array from certain position
+            /// </summary>
+            /// <param name="sourceArray">The Array that will get copied</param>
+            /// <param name="sourceStartIndex">The position from which the elements shall get copied</param>
+            /// <param name="destinationArray"> The array the elements shall get copied onto </param>
+            /// <param name="destStartIndex">The position we shall paste the elements</param>
+            /// <param name="count">The ammount of elements that will get copied</param>
+            /// <autor>Yasen Velinov</autor>
+            public static void CopyFrom(int[] sourceArray, int sourceStartIndex, int[] destinationArray, int destStartIndex, int count)
+            {   
+                count = Math.Min(count, destinationArray.Length - destStartIndex);
+                count = Math.Min(sourceArray.Length - sourceStartIndex, count);
+                for (int i = 0; i < count; i++)
+                {
+                destinationArray[i-destStartIndex] = sourceArray[i-sourceStartIndex];
+                }
+            }
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: Copy is not implemented!");
-        }
-
-        public static void CopyFrom(int[] sourceArray, int sourceStartIndex, int[] destinationArray, int destStartIndex, int count)
-        {
-            //Alex
-
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: CopyFrom is not implemented!");
-        }
-
-        public static void Fill(int[] source, int element)
+            public static void Fill(int[] source, int element)
         {
             //Ivan
 
@@ -196,8 +214,6 @@ namespace Hackaton
 
         public static int[] RemoveAllOccurrences(int[] source, int element)
         {
-            //Yasen
-
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: RemoveAllOccurrences is not implemented!");
         }
