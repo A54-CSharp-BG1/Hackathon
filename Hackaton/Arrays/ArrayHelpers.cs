@@ -194,8 +194,14 @@ namespace Hackaton
                 destinationArray[i-destStartIndex] = sourceArray[i-sourceStartIndex];
                 }
             }
-
-            public static void Fill(int[] source, int element)
+        /// <summary>
+        /// Fills source with element.
+        /// </summary>
+        /// <param name="source">The array to fill</param>
+        /// <param name="element">The element to fill with</param>
+        /// <returns>Void, an array that is filled entirely with the element integer.</returns>
+        /// <author>Ivan Uzunov</author>    
+        public static void Fill(int[] source, int element)
         {
             for (int i = 0; i < source.Length; i++)
             {
@@ -277,11 +283,25 @@ namespace Hackaton
 
             return true;
         }
-
+        /// <summary>
+        /// Removes all occurrences of element within source.
+        /// </summary>
+        /// <param name="source">The array to remove from></param>
+        /// <param name="element">The element to check for</param>
+        /// <returns>A new array with all occurences of element removed.</returns>
+        /// <author>Ivan Uzunov</author>
         public static int[] RemoveAllOccurrences(int[] source, int element)
         {
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: RemoveAllOccurrences is not implemented!");
+            List<int> result = new List<int>();
+            for (int i = 0; i < source.Length; i++)
+            {
+                if (source[i] != element)
+                {
+                    result.Add(source[i]);
+                }
+            }
+            source = result.ToArray();
+            return source;
         }
 
         public static void Reverse(int[] arrayToReverse)

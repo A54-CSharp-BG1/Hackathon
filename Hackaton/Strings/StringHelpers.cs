@@ -62,7 +62,6 @@ namespace Hackaton
             }
             return newString;
         }
-
         /// <summary>
         /// Concatenates two strings and returns a new string.
         /// </summary>
@@ -70,12 +69,11 @@ namespace Hackaton
         /// <param name="string2">The right part of the new string</param>
         /// <returns>A string that represents the concatenation of string1's characters followed by string2's characters.</returns>
         /// <author>Plamen Nedelchev</author>
-
         public static string Concat(string string1, string string2)
         {
             return string1 + string2;
         }
-
+     
         public static bool Contains(string source, char symbol)
         {
             //Yasen
@@ -163,7 +161,6 @@ namespace Hackaton
             }
             return result;
         }
-
         /// <summary>
         /// Concatenates a given symbol N times both at the start and at the end of the string.
         /// </summary>
@@ -172,7 +169,6 @@ namespace Hackaton
         /// <param name="paddingSymbol"></param>
         /// <returns>Returns a new string.</returns>
         /// <author>Plamen Nedelchev</author>
-
         public static string Pad(string source, int length, char paddingSymbol)
         {
             if (length < source.Length)
@@ -239,14 +235,12 @@ namespace Hackaton
             }
             return newString;
         }
-
         /// <summary>
         /// Reverses a given string.
         /// </summary>
         /// <param name="source"></param>
         /// <returns>Returns a new reversed string.</returns>
         /// <author>Plamen Nedelchev</author>
-
         public static string Reverse(string source)
         {
             string reversedString = string.Empty;
@@ -258,7 +252,6 @@ namespace Hackaton
 
             return reversedString;
         }
-
         /// <summary>
         /// Returns a new string, starting from start and ending at end.
         /// </summary>
