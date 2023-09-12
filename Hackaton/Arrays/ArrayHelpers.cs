@@ -38,9 +38,51 @@ namespace Hackaton
         public static int[] InsertAt(int[] source, int index, int element)
         {
             //Milen
+            int[] newArray = new int[source.Length+1];
+            if (index == 0)
+            {
+                newArray[0] = element;
+                for (int i = 1; i < newArray.Length; i++)
+                {
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: InsertAt is not implemented!");
+                    newArray[i] = source[i - 1];
+                }
+
+            }
+            if (index > source.Length-1)
+            {
+                for (int i = 0; i < newArray.Length; i++)
+                {
+                    if (i < source.Length - 1)
+                    {
+                        newArray[i] = source[i];
+                    }
+                    else
+                    {
+                        newArray[i] = element;
+                    }
+                  
+                }
+            }
+            if(index<source.Length-1 && index != 0)
+            {
+                for (int i = 0; i < newArray.Length; i++)
+                {
+                    if(i == index)
+                    {
+                        newArray[i] = element;
+                        for (int j = i+1; j < newArray.Length; j++)
+                        {
+                            newArray[j] = source[i];
+                        }
+                    }
+                }
+            }
+          
+            
+           
+            return newArray;
+         
         }
 
         public static bool Contains(int[] source, int element)
@@ -86,7 +128,21 @@ namespace Hackaton
         public static int LastIndexOf(int[] source, int target)
         {
             //Milen
-
+            int result = -1;
+            if(source.Length != 0)
+            for (int i = 0; i < source.Length; i++)
+            {
+                if (source[i] == target && i != 0)
+                {
+                    result = i;
+                }
+                else
+                {
+                    result = -1;
+                }
+            }
+            
+            return result;
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: LastIndexOf is not implemented!");
         }
