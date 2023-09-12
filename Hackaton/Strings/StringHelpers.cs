@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.XPath;
 
 namespace Hackaton
 {
@@ -26,13 +27,11 @@ namespace Hackaton
         /// <param name="string1">The left part of the new string</param>
         /// <param name="string2">The right part of the new string</param>
         /// <returns>A string that represents the concatenation of string1's characters followed by string2's characters.</returns>
-        /// <author>Kiril Stanoev</author>
+        /// <author>Plamen Nedelchev</author>
+        
         public static string Concat(string string1, string string2)
         {
-            //Plamen
-
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: Concat is not implemented!");
+            return string1 + string2;
         }
 
         public static bool Contains(string source, char symbol)
@@ -75,12 +74,32 @@ namespace Hackaton
             throw new NotImplementedException("Error: LastIndexOf is not implemented!");
         }
 
+        /// <summary>
+        /// Concatenates a given symbol N times both at the start and at the end of the string.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="length"></param>
+        /// <param name="paddingSymbol"></param>
+        /// <returns>Returns a new string.</returns>
+        /// <author>Plamen Nedelchev</author>
+
         public static string Pad(string source, int length, char paddingSymbol)
         {
-            //Plamen
+            if (length < source.Length)
+            {
+                return source;
+            }
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: Pad is not implemented!");
+            int padLeftLength = (length - source.Length) / 2;
+            int padRightLength = (length - source.Length) / 2;
+
+            string result = string.Empty;
+
+            result += new string(paddingSymbol, padLeftLength);
+            result += source;
+            result += new string(paddingSymbol, padRightLength);
+
+            return result;
         }
 
         public static string PadEnd(string source, int length, char paddingSymbol)
@@ -105,12 +124,23 @@ namespace Hackaton
             throw new NotImplementedException("Error: Repeat is not implemented!");
         }
 
+        /// <summary>
+        /// Reverses a given string.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns>Returns a new reversed string.</returns>
+        /// <author>Plamen Nedelchev</author>
+
         public static string Reverse(string source)
         {
-            //Plamen
+            string reversedString = string.Empty;
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: Reverse is not implemented!");
+            for (int i = source.Length - 1; i >= 0; i--)
+            {
+                reversedString += source[i];
+            }
+
+            return reversedString;
         }
 
         public static string Section(string source, int start, int end)

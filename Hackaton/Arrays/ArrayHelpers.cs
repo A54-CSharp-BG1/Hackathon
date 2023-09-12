@@ -85,12 +85,25 @@ namespace Hackaton
          
         }
 
+        /// <summary>
+        /// Checks whether a given element is present in an array.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="element"></param>
+        /// <returns>Returns true if the element is present and false if it is not.</returns>
+        /// <author>Plamen Nedelchev</author>
+
         public static bool Contains(int[] source, int element)
         {
-            //Plamen
+            for (int i = 0; i < source.Length; i++)
+            {
+                if (source[i] == element)
+                {
+                    return true;
+                }
+            }
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: Contains is not implemented!");
+            return false;
         }
 
         public static void Copy(int[] sourceArray, int[] destinationArray, int count)
@@ -147,12 +160,24 @@ namespace Hackaton
             throw new NotImplementedException("Error: LastIndexOf is not implemented!");
         }
 
+        /// <summary>
+        /// Check whether a given index is inside the bounds of the array.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="index"></param>
+        /// <returns>Returns true if the index is inside the bounds of the array and false if it is not.</returns>
+        /// <author>Plamen Nedelchev</author>
+
         public static bool IsValidIndex(int[] source, int index)
         {
-            //Plamen
+            if (source.Length == 0
+                || index < 0
+                || index >= source.Length)
+            {
+                return false;
+            }
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: IsValidIndex is not implemented!");
+            return true;
         }
 
         public static int[] RemoveAllOccurrences(int[] source, int element)
