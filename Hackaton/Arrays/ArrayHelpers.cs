@@ -34,7 +34,14 @@ namespace Hackaton
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: AppendAll is not implemented!");
         }
-
+        /// <summary>
+        /// Insert specific element to specific index of the array and resize the array.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="index"></param>
+        /// <param name="element"></param>/param>
+        /// <returns>returns a new resized int array with changed element .</returns>
+        /// <author>Milen Marinov</author>
         public static int[] InsertAt(int[] source, int index, int element)
         {
             //Milen
@@ -138,6 +145,13 @@ namespace Hackaton
             throw new NotImplementedException("Error: FirstIndexOf is not implemented!");
         }
 
+        /// <summary>
+        /// Finds specific integer in the array.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <returns>returns the index of the target value.</returns>
+        /// <author>Milen Marinov</author>
         public static int LastIndexOf(int[] source, int target)
         {
             //Milen

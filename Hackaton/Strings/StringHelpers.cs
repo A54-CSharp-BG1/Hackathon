@@ -12,13 +12,28 @@ namespace Hackaton
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Abbreviate is not implemented!");
         }
-
+        /// <summary>
+        /// Convert first letter of the string to UpperCase
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns>returns a new string with first letter converted to Uppercase.</returns>
+        /// <author>Milen Marinov</author>
         public static string Capitalize(string source)
         {
-            //Milen
-            
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: Capitalize is not implemented!");
+            string newString = string.Empty;
+          if(source == string.Empty)
+            {
+                return string.Empty;
+            }
+            if (source != string.Empty)
+            {
+                newString = char.ToUpper(source[0]) + source.Substring(1);
+            }
+            else if (char.IsUpper(source[0]))
+            {
+                newString = source;
+            }
+            return newString;
         }
 
         /// <summary>
@@ -65,13 +80,25 @@ namespace Hackaton
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: FirstIndexOf is not implemented!");
         }
-
+        /// <summary>
+        /// Finds specific char in string.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="symbol"></param>
+        /// <returns>returns index of the char containing in the string.</returns>
+        /// <author>Milen Marinov</author>
         public static int LastIndexOf(string source, char symbol)
         {
-            //Milen
-
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: LastIndexOf is not implemented!");
+           
+            int result = -1;
+            for (int i = 0; i < source.Length; i++)
+            {
+                if (source[i] == symbol)
+                {
+                    result = i;
+                }
+            }
+            return result;
         }
 
         /// <summary>
@@ -115,13 +142,21 @@ namespace Hackaton
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: PadStart is not implemented!");
         }
-
+        /// <summary>
+        /// Repeat a given string for N times.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="times"></param>
+        /// <returns>returns a new string which is repeated by second parameter .</returns>
+        /// <author>Milen Marinov</author>
         public static string Repeat(string source, int times)
         {
-            //Milen
-
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: Repeat is not implemented!");
+            string newString = "";
+            for (int i = 0; i < times; i++)
+            {
+                newString += source;
+            }
+            return newString;
         }
 
         /// <summary>
