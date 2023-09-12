@@ -21,11 +21,11 @@ namespace Hackaton
         }
 
         /// <summary>
-        /// Adds the int element at the end of the array source.
+        /// Adds element to the end of source.
         /// </summary>
         /// <param name="source">The array to add to</param>
         /// <param name="element">The element to add</param>
-        /// <returns>A new array that has all the elements from the original array and the added element at last position.</returns>
+        /// <returns>A new array, the original array with element at the end.</returns>
         /// <author>Ivan Uzunov</author>
         public static int[] AddLast(int[] source, int element)
         {
@@ -107,10 +107,7 @@ namespace Hackaton
                         }
                     }
                 }
-            }
-          
-            
-           
+            }          
             return newArray;
          
         }
@@ -267,12 +264,12 @@ namespace Hackaton
             throw new NotImplementedException("Error: Reverse is not implemented!");
         }
         /// <summary>
-        /// Create a new array that contains a section of the previous one.
+        /// Returns a new array, from source, starting from startIndex and until endIndex.
         /// </summary>
-        /// <param name="source">The array to add to</param>
-        /// <param name="startIndex">The index where the section starts from</param>
-        /// <param name="endIndex">The index where the section ends</param>
-        /// <returns>A new array that contains only a section of the previous array with indexes that are passed as parameters.</returns>
+        /// <param name="source">The array to create the new array from</param>
+        /// <param name="startIndex">The starting index</param>
+        /// <param name="endIndex">The end index</param>
+        /// <returns>A new array starting from startIndex and until endIndex.</returns>
         /// <author>Ivan Uzunov</author>
         public static int[] Section(int[] source, int startIndex, int endIndex)
         {  
