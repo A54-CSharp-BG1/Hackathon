@@ -7,12 +7,37 @@ namespace Hackaton
 {
     public class StringHelpers
     {
+        /// <summary>
+        /// Shorten the string to a given length/abbreviate it.
+        /// </summary>
+        /// <param name="source">The source string</param>
+        /// <param name="maxLength">The value that corresponds to the length of the new shortened version of the string</param>
+        /// <returns>The shortened version of the string with appended dots to point out that it has continuation</returns>
+        /// <remarks>
+        /// - Returns empty string if the source is empty.
+        /// <br></br>
+        /// - Returns the source string if the given limit exceeds the source's length.
+        /// </remarks>
+        /// <author>Maria Ivanova</author>
         public static string Abbreviate(string source, int maxLength)
         {
             //Maria
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: Abbreviate is not implemented!");
+            if (source == string.Empty) return string.Empty;
+
+            if (maxLength > source.Length)
+            {
+                return source;
+            }
+            string result = string.Empty;
+
+            for (int i = 0; i < maxLength; i++)
+            {
+                result += source[i];
+            }
+            result += "...";
+            return result;
+            
         }
         /// <summary>
         /// Convert first letter of the string to UpperCase
@@ -90,12 +115,33 @@ namespace Hackaton
             }
         }
 
+        /// <summary>
+        /// Searches for the first occurrence of the desired character in the given string.
+        /// </summary>
+        /// <param name="source">The source string</param>
+        /// <param name="target">The target character</param>
+        /// <remarks>
+        /// - Returns negative one if the string does not contain the given character.
+        /// <br></br>
+        /// - Returns negative one if the string is empty.
+        /// </remarks>
+        /// <returns>The index of the first occurrence of the target character.</returns>
+        /// <author>Maria Ivanova</author>
+
         public static int FirstIndexOf(string source, char target)
         {
             //Maria
+            int result = -1;
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: FirstIndexOf is not implemented!");
+            for (int i = 0; i < source.Length;i++)
+            {
+                if (source[i] == target)
+                {
+                    result = i;
+                }
+            }
+
+            return result;
         }
         /// <summary>
         /// Finds specific char in string.
