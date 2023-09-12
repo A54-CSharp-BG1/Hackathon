@@ -176,7 +176,7 @@ namespace Hackaton
             }
             }
             
-            /// <summary>
+        /// <summary>
             /// Copy certain amount of int elements from an array from certain position onto another array from certain position
             /// </summary>
             /// <param name="sourceArray">The Array that will get copied</param>
@@ -185,7 +185,7 @@ namespace Hackaton
             /// <param name="destStartIndex">The position we shall paste the elements</param>
             /// <param name="count">The ammount of elements that will get copied</param>
             /// <autor>Yasen Velinov</autor>
-            public static void CopyFrom(int[] sourceArray, int sourceStartIndex, int[] destinationArray, int destStartIndex, int count)
+        public static void CopyFrom(int[] sourceArray, int sourceStartIndex, int[] destinationArray, int destStartIndex, int count)
             {   
                 count = Math.Min(count, destinationArray.Length - destStartIndex);
                 count = Math.Min(sourceArray.Length - sourceStartIndex, count);
