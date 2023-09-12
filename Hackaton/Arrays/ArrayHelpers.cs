@@ -13,109 +13,217 @@ namespace Hackaton
         /// <author>Kiril Stanoev</author>
         public static int[] AddFirst(int[] source, int element)
         {
+            //alex
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: AddFirst is not implemented!");
         }
 
         public static int[] AddLast(int[] source, int element)
         {
+            //Ivan
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: AddLast is not implemented!");
         }
 
         public static int[] AppendAll(int[] source, int[] elements)
         {
+            //Maria
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: AppendAll is not implemented!");
         }
 
         public static int[] InsertAt(int[] source, int index, int element)
         {
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: InsertAt is not implemented!");
+            //Milen
+            int[] newArray = new int[source.Length+1];
+            if (index == 0)
+            {
+                newArray[0] = element;
+                for (int i = 1; i < newArray.Length; i++)
+                {
+
+                    newArray[i] = source[i - 1];
+                }
+
+            }
+            if (index > source.Length-1)
+            {
+                for (int i = 0; i < newArray.Length; i++)
+                {
+                    if (i < source.Length - 1)
+                    {
+                        newArray[i] = source[i];
+                    }
+                    else
+                    {
+                        newArray[i] = element;
+                    }
+                  
+                }
+            }
+            if(index<source.Length-1 && index != 0)
+            {
+                for (int i = 0; i < newArray.Length; i++)
+                {
+                    if(i == index)
+                    {
+                        newArray[i] = element;
+                        for (int j = i+1; j < newArray.Length; j++)
+                        {
+                            newArray[j] = source[i];
+                        }
+                    }
+                }
+            }
+          
+            
+           
+            return newArray;
+         
         }
+
+        /// <summary>
+        /// Checks whether a given element is present in an array.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="element"></param>
+        /// <returns>Returns true if the element is present and false if it is not.</returns>
+        /// <author>Plamen Nedelchev</author>
 
         public static bool Contains(int[] source, int element)
         {
+            for (int i = 0; i < source.Length; i++)
+            {
+                if (source[i] == element)
+                {
+                    return true;
+                }
+            }
+            /// <summary>
+            /// Copies a certain amount of int elements from one array onto another starting from the first position of the array
+            /// </summary>
+            /// <param name="sourceArray">The source array that is going to get copie</param>
+            /// <param name="destinationArray">The destination of the new copy</param>
+            /// <param name="count">The amount of parameters that will get copied</param>
+            
+            return false;
+        }
+
+            /// <author>Yasen Velinov</author>p
+            public static void Copy(int[] sourceArray, int[] destinationArray, int count)
+            {
+                count = Math.Min(count, destinationArray.Length);
+                count = Math.Min(sourceArray.Length, count);
+                for (int i = 0; i < count; i++)
+            //Yasen
+
             // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: Contains is not implemented!");
+            throw new NotImplementedException("Error: Copy is not implemented!");
         }
-
-
-        /// <summary>
-        /// Copies a certain amount of int elements from one array onto another starting from the first position of the array
-        /// </summary>
-        /// <param name="sourceArray">The source array that is going to get copie</param>
-        /// <param name="destinationArray">The destination of the new copy</param>
-        /// <param name="count">The amount of parameters that will get copied</param>
-        /// <author>Yasen Velinov</author>
-        public static void Copy(int[] sourceArray, int[] destinationArray, int count)
-        {
-            count = Math.Min(count, destinationArray.Length);
-            count = Math.Min(sourceArray.Length, count);
-            for(int i=0; i < count; i++)
-            {
-                destinationArray[i] = sourceArray[i];
             }
-        }
-
-        /// <summary>
-        /// Copy certain amount of int elements from an array from certain position onto another array from certain position
-        /// </summary>
-        /// <param name="sourceArray">The Array that will get copied</param>
-        /// <param name="sourceStartIndex">The position from which the elements shall get copied</param>
-        /// <param name="destinationArray"> The array the elements shall get copied onto </param>
-        /// <param name="destStartIndex">The position we shall paste the elements</param>
-        /// <param name="count">The ammount of elements that will get copied</param>
-        /// <autor>Yasen Velinov</autor>
-        public static void CopyFrom(int[] sourceArray, int sourceStartIndex, int[] destinationArray, int destStartIndex, int count)
-        {
-            count = Math.Min(count, destinationArray.Length - destStartIndex);
-            count = Math.Min(sourceArray.Length - sourceStartIndex, count);
-            for (int i = 0; i < count; i++)
+            /// <summary>
+            /// Copy certain amount of int elements from an array from certain position onto another array from certain position
+            /// </summary>
+            /// <param name="sourceArray">The Array that will get copied</param>
+            /// <param name="sourceStartIndex">The position from which the elements shall get copied</param>
+            /// <param name="destinationArray"> The array the elements shall get copied onto </param>
+            /// <param name="destStartIndex">The position we shall paste the elements</param>
+            /// <param name="count">The ammount of elements that will get copied</param>
+            /// <autor>Yasen Velinov</autor>
+            public static void CopyFrom(int[] sourceArray, int sourceStartIndex, int[] destinationArray, int destStartIndex, int count)
             {
-                destinationArray[i+destStartIndex] = sourceArray[i+sourceStartIndex];
-            }
-        }
+                count = Math.Min(count, destinationArray.Length - destStartIndex);
+                count = Math.Min(sourceArray.Length - sourceStartIndex, count);
+                for (int i = 0; i < count; i++)
+                {
+            //Alex
 
-        public static void Fill(int[] source, int element)
+            // Remove the line below then add your implementation.
+            throw new NotImplementedException("Error: CopyFrom is not implemented!");
+                }
+            }
+
+            public static void Fill(int[] source, int element)
         {
+            //Ivan
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Fill is not implemented!");
         }
 
         public static int FirstIndexOf(int[] source, int target)
         {
+            //Maria
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: FirstIndexOf is not implemented!");
         }
 
         public static int LastIndexOf(int[] source, int target)
         {
+            //Milen
+            int result = -1;
+            if(source.Length != 0)
+            for (int i = 0; i < source.Length; i++)
+            {
+                if (source[i] == target && i != 0)
+                {
+                    result = i;
+                }
+                else
+                {
+                    result = -1;
+                }
+            }
+            
+            return result;
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: LastIndexOf is not implemented!");
         }
 
+        /// <summary>
+        /// Check whether a given index is inside the bounds of the array.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="index"></param>
+        /// <returns>Returns true if the index is inside the bounds of the array and false if it is not.</returns>
+        /// <author>Plamen Nedelchev</author>
+
         public static bool IsValidIndex(int[] source, int index)
         {
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: IsValidIndex is not implemented!");
+            if (source.Length == 0
+                || index < 0
+                || index >= source.Length)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public static int[] RemoveAllOccurrences(int[] source, int element)
         {
+            //Yasen
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: RemoveAllOccurrences is not implemented!");
         }
 
         public static void Reverse(int[] arrayToReverse)
         {
+            //Alex
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Reverse is not implemented!");
         }
 
         public static int[] Section(int[] source, int startIndex, int endIndex)
         {
+            //Ivan
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Section is not implemented!");
         }
