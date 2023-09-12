@@ -54,8 +54,36 @@ namespace Hackaton
         {
             //Maria
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: AppendAll is not implemented!");
+            if (source.Length == elements.Length)
+            {
+                bool equal = true;
+                for (int i = 0; i < source.Length; i++)
+                {
+                    if (source[i] != elements[i])
+                    {
+                        equal = false;
+                    }
+                }
+
+                if (equal == true) return source;
+            }
+
+            int[] result = new int[source.Length + elements.Length];
+
+            int index = 0;
+
+            for (int i = 0; i < source.Length; i++)
+            {
+                result[index] = source[i];
+                index++;
+            }
+            for (int i = 0; i < elements.Length; i++)
+            {
+                result[index] = elements[i];
+                index++;
+            }
+
+            return result;
         }
         /// <summary>
         /// Insert specific element to specific index of the array and resize the array.
