@@ -42,6 +42,14 @@ namespace Hackaton
             return source;
         }
 
+        /// <summary>
+        /// Appends new elements to the original array.
+        /// </summary>
+        /// <param name="source">The array to add to</param>
+        /// <param name="elements">The elements to add</param>
+        /// <returns>A new array that has all the elements from the original array and the new appended elements.</returns>
+        /// <author>Maria Ivanova</author>
+
         public static int[] AppendAll(int[] source, int[] elements)
         {
             //Maria
@@ -170,12 +178,30 @@ namespace Hackaton
             }
         }
 
+        /// <summary>
+        /// Searches for the first appearance of a desired element in an array.
+        /// </summary>
+        /// <param name="source">Array to search</param>
+        /// <param name="target">Target element</param>
+        /// <returns>The index of the first occurrence of the target element.</returns>
+        /// <author>Maria Ivanova</author>
+
         public static int FirstIndexOf(int[] source, int target)
         {
             //Maria
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: FirstIndexOf is not implemented!");
+            int result = -1;
+
+            for (int i = 0; i < source.Length; i++)
+            {
+                if (source[i] == target)
+                {
+                    result = i;
+                    break;
+                }
+            }
+
+            return result;
         }
 
         /// <summary>
