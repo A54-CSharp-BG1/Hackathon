@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Xml.XPath;
 
 namespace Hackaton
@@ -8,7 +10,7 @@ namespace Hackaton
         public static string Abbreviate(string source, int maxLength)
         {
             //Maria
-            
+
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Abbreviate is not implemented!");
         }
@@ -21,7 +23,7 @@ namespace Hackaton
         public static string Capitalize(string source)
         {
             string newString = string.Empty;
-          if(source == string.Empty)
+            if (source == string.Empty)
             {
                 return string.Empty;
             }
@@ -43,7 +45,7 @@ namespace Hackaton
         /// <param name="string2">The right part of the new string</param>
         /// <returns>A string that represents the concatenation of string1's characters followed by string2's characters.</returns>
         /// <author>Plamen Nedelchev</author>
-        
+
         public static string Concat(string string1, string string2)
         {
             return string1 + string2;
@@ -65,12 +67,27 @@ namespace Hackaton
             throw new NotImplementedException("Error: StartsWith is not implemented!");
         }
 
+        /// <summary>
+        /// Checks if the string source ends with the given character.
+        /// </summary>
+        /// <param name="source">The string to check</param>
+        /// <param name="target">The character to check for</param>
+        /// <returns> A bool variable - true if the string ends with target, else false.</returns>
+        /// <author>Ivan Uzunov</author>
         public static bool EndsWith(string source, char target)
         {
-            //Ivan
-
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: EndsWith is not implemented!");
+            if (source == string.Empty)
+            {
+                return false;
+            }
+            else if (source[source.Length - 1] != target)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public static int FirstIndexOf(string source, char target)
@@ -89,7 +106,7 @@ namespace Hackaton
         /// <author>Milen Marinov</author>
         public static int LastIndexOf(string source, char symbol)
         {
-           
+
             int result = -1;
             for (int i = 0; i < source.Length; i++)
             {
@@ -136,11 +153,29 @@ namespace Hackaton
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: PadEnd is not implemented!");
         }
-
+        /// <summary>
+        /// Pads source on the left side with PaddingSymbol enough times to reach length length.
+        /// </summary>
+        /// <param name="source">The string to pad</param>
+        /// <param name="length">The length of the string to achieve</param>
+        /// <param name="paddingSymbol">The character used as padding</param>
+        /// <returns> The padded string.</returns>
+        /// <author>Ivan Uzunov</author>
         public static string PadStart(string source, int length, char paddingSymbol)
         {
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: PadStart is not implemented!");
+            char[] arr = new char[length];
+            for (int i = 0; i < length - source.Length; i++)
+            {
+                arr[i] = paddingSymbol;
+            }
+            int index = 0;
+            for (int i = length - source.Length; i < length; i++)
+            {
+                arr[i] = source[index];
+                index++;
+            }
+            source = new string(arr);
+            return source;
         }
         /// <summary>
         /// Repeat a given string for N times.
@@ -178,10 +213,19 @@ namespace Hackaton
             return reversedString;
         }
 
+        /// <summary>
+        /// Returns a new string, starting from start and ending at end.
+        /// </summary>
+        /// <param name="source">The string to extract a section from</param>
+        /// <param name="start">The starting position in source (inclusive)</param>
+        /// <param name="end">The end position in source (inclusive)</param>
+        /// <returns> A new string, formed by the characters in source, starting from start to end.</returns>
+        /// <author>Ivan Uzunov</author>
         public static string Section(string source, int start, int end)
-        {
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: Section is not implemented!");
+        {            
+            char[] sourceArr = source.ToCharArray(2, (end - start) + 1);
+            source = new string(sourceArr);
+            return source;
         }
     }
 }
