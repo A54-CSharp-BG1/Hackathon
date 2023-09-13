@@ -316,10 +316,14 @@ namespace Hackaton
             source = result.ToArray();
             return source;
         }
-
+        /// <summary>
+        /// Reverses arrayToReverse.
+        /// </summary>
+        /// <param name="arrayToReverse">The array to reverse></param>
+        /// <returns>Void, a reversed array</returns>
+        /// <author>Alex Cemirtan</author>
         public static void Reverse(int[] arrayToReverse)
         {
-            int index = arrayToReverse.Length - 1;
             for (int i = 0; i < arrayToReverse.Length / 2; i++)
             {
                 int tmp = arrayToReverse[i];

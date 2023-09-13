@@ -81,13 +81,27 @@ namespace Hackaton
             // Remove the line below then add your implementation.
             throw new NotImplementedException("Error: Contains is not implemented!");
         }
-
+        /// <summary>
+        /// Checks if the string source starts with the given character.
+        /// </summary>
+        /// <param name="source">The string to inspect</param>
+        /// <param name="target">The character to search for</param>
+        /// <returns>bool - true if string starts with target, otherwise false</returns>
+        /// <author>Alex Cemirtan</author>
         public static bool StartsWith(string source, char target)
         {
-            //Alex
-
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: StartsWith is not implemented!");
+            if (source == string.Empty)
+            {
+                return false;
+            }
+            else if (source[0] != target)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         /// <summary>
