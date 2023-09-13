@@ -211,9 +211,9 @@ namespace Hackaton
         public static string PadEnd(string source, int length, char paddingSymbol)
         {
             string output = source;
-            for(int i=source.Length; i<length; i++)
+            for(int i=; i<source.Length+length; i++)
             {
-                output += paddingSymbol;
+                source += paddingSymbol;
             }
             return output;
         }
