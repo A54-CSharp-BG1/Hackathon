@@ -19,7 +19,6 @@ namespace Hackaton
         /// - Returns the source string if the given limit exceeds the source's length.
         /// </remarks>
         /// <author>Maria Ivanova</author>
-        /// 
         public static string Abbreviate(string source, int maxLength)
         {
             //Maria
@@ -74,24 +73,13 @@ namespace Hackaton
         {
             return string1 + string2;
         }
-
-       
-        /// <summary>
-        /// Checks if a select symbol is present within a string
-        /// </summary>
-        /// <param name="source">The string to check</param>
-        /// <param name="symbol">The character to check</param>
-        /// <returns>a bool variable, true if the string contains the symbol or false if it doesnt.</returns>
-        /// <author>Yasen Velinov</author>
+     
         public static bool Contains(string source, char symbol)
-        {   
-            for(int i=0; i<source.Length; i++)
-            {
-                if (source[i] == symbol)
-                    return true;
-            }
+        {
+            //Yasen
 
-            return false;
+            // Remove the line below then add your implementation.
+            throw new NotImplementedException("Error: Contains is not implemented!");
         }
 
         public static bool StartsWith(string source, char target)
@@ -199,21 +187,13 @@ namespace Hackaton
 
             return result;
         }
-        /// <summary>
-        /// Increase the length of a string by filling the empty spaces with a certain symbol
-        /// </summary>
-        /// <param name="source">the starting string</param>
-        /// <param name="length">the length of the new string</param>
-        /// <param name="paddingSymbol">the symbol that will get added to it</param>
-        /// <returns>the new modified string</returns>
+
         public static string PadEnd(string source, int length, char paddingSymbol)
         {
-            string output = source;
-            for(int i=; i<source.Length+length; i++)
-            {
-                source += paddingSymbol;
-            }
-            return output;
+            //Yasen
+
+            // Remove the line below then add your implementation.
+            throw new NotImplementedException("Error: PadEnd is not implemented!");
         }
         /// <summary>
         /// Pads source on the left side with PaddingSymbol enough times to reach length length.
