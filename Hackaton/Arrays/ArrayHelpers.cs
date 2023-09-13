@@ -192,7 +192,7 @@ namespace Hackaton
         /// <param name="destinationArray"> The array the elements shall get copied onto </param>
         /// <param name="destStartIndex">The position we shall paste the elements</param>
         /// <param name="count">The ammount of elements that will get copied</param>
-        /// <autor>Yasen Velinov</autor>
+        /// <autor>Alex Cemirtan</autor>
         
         public static void CopyFrom(int[] sourceArray, int sourceStartIndex, int[] destinationArray, int destStartIndex, int count)
         {
@@ -201,13 +201,6 @@ namespace Hackaton
                 destinationArray[destStartIndex] = sourceArray[i];
                 destStartIndex++;
             }
-
-            //count = Math.Min(count, destinationArray.Length - destStartIndex);
-            //count = Math.Min(sourceArray.Length - sourceStartIndex, count);
-            //for (int i = 0; i < count; i++)
-            //{
-            //    destinationArray[i - destStartIndex] = sourceArray[i - sourceStartIndex];
-            //}
         }
         /// <summary>
         /// Fills source with element.
@@ -319,13 +312,12 @@ namespace Hackaton
 
         public static void Reverse(int[] arrayToReverse)
         {
-            int index = arrayToReverse.Length - 1;
             for (int i = 0; i < arrayToReverse.Length / 2; i++)
             {
                 int tmp = arrayToReverse[i];
                 arrayToReverse[i] = arrayToReverse[arrayToReverse.Length - i - 1];
                 arrayToReverse[arrayToReverse.Length - i - 1] = tmp;
-            }            
+            }
         }
         /// <summary>
         /// Returns a new array, from source, starting from startIndex and until endIndex.
