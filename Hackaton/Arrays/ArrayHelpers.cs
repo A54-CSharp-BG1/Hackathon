@@ -104,6 +104,23 @@ namespace Hackaton
         public static int[] InsertAt(int[] source, int index, int element)
         {
             //Milen
+
+            //int[] result = new int[source.Length + 1];
+
+            //for (int i = 0; i < index; i++)
+            //{
+            //    result[i] = source[i];
+            //}
+
+            //result[index] = element;
+
+            //for (int i = index + 1; i < result.Length; i++)
+            //{
+            //    result[i] = source[i - 1];
+            //}
+
+            //return result;
+
             int[] newArray = new int[source.Length + 1];
             if (index == 0)
             {
