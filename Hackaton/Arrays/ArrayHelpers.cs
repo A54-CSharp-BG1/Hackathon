@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Hackaton
 {
@@ -15,23 +14,11 @@ namespace Hackaton
         /// <author>Kiril Stanoev</author>
         public static int[] AddFirst(int[] source, int element)
         {
-            if (arrayToReverse == null)
-            {
-                throw new ArgumentNullException(nameof(arrayToReverse), "Error: The input array cannot be null.");
-            }
+            //alex
 
-            int left = 0;
-            int right = arrayToReverse.Length - 1;
-
-            while (left < right)
-            {
-                int temp = arrayToReverse[left];
-                arrayToReverse[left] = arrayToReverse[right];
-                arrayToReverse[right] = temp;
-
-                left++;
-                right--;
-            }
+            // Remove the line below then add your implementation.
+            throw new NotImplementedException("Error: AddFirst is not implemented!");
+        }
 
         /// <summary>
         /// Adds element to the end of source.
@@ -319,7 +306,10 @@ namespace Hackaton
 
         public static void Reverse(int[] arrayToReverse)
         {
-                arrayToReverse.Reverse();
+            //Alex
+
+            // Remove the line below then add your implementation.
+            throw new NotImplementedException("Error: Reverse is not implemented!");
         }
         /// <summary>
         /// Returns a new array, from source, starting from startIndex and until endIndex.

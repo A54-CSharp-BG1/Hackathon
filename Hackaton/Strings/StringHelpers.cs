@@ -96,12 +96,10 @@ namespace Hackaton
 
         public static bool StartsWith(string source, char target)
         {
-            if (string.IsNullOrEmpty(source))
-            {
-                return false;
-            }
+            //Alex
 
-            return source[0] == target;
+            // Remove the line below then add your implementation.
+            throw new NotImplementedException("Error: StartsWith is not implemented!");
         }
 
         /// <summary>
