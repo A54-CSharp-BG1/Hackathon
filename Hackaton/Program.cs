@@ -6,7 +6,7 @@ namespace Hackaton
     {
         static void Main()
         {
-            // example
+
         }
     }
 }
