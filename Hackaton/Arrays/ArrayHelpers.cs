@@ -11,13 +11,20 @@ namespace Hackaton
         /// <param name="source">The array to add to</param>
         /// <param name="element">The element to add</param>
         /// <returns>A new array that has all the elements from the original array and the added element at head position.</returns>
-        /// <author>Kiril Stanoev</author>
+        /// <author>Alex Cemirtan</author>
+
         public static int[] AddFirst(int[] source, int element)
         {
-            //alex
+            int[] result = new int[source.Length + 1];
 
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: AddFirst is not implemented!");
+            result[0] = element;
+
+            for (int i = 0; i < source.Length; i++)
+            {
+                result[i + 1] = source[i];
+            }
+
+            return result;
         }
 
         /// <summary>
@@ -27,12 +34,13 @@ namespace Hackaton
         /// <param name="element">The element to add</param>
         /// <returns>A new array, the original array with element at the end.</returns>
         /// <author>Ivan Uzunov</author>
+
         public static int[] AddLast(int[] source, int element)
         {
             int[] newSource = new int[source.Length + 1];
             for (int i = 0; i < source.Length + 1; i++)
             {
-                if(i < source.Length)
+                if (i < source.Length)
                 {
                     newSource[i] = source[i];
                 }
@@ -96,7 +104,7 @@ namespace Hackaton
         public static int[] InsertAt(int[] source, int index, int element)
         {
             //Milen
-            int[] newArray = new int[source.Length+1];
+            int[] newArray = new int[source.Length + 1];
             if (index == 0)
             {
                 newArray[0] = element;
@@ -107,7 +115,7 @@ namespace Hackaton
                 }
 
             }
-            if (index > source.Length-1)
+            if (index > source.Length - 1)
             {
                 for (int i = 0; i < newArray.Length; i++)
                 {
@@ -119,25 +127,25 @@ namespace Hackaton
                     {
                         newArray[i] = element;
                     }
-                  
+
                 }
             }
-            if(index<source.Length-1 && index != 0)
+            if (index < source.Length - 1 && index != 0)
             {
                 for (int i = 0; i < newArray.Length; i++)
                 {
-                    if(i == index)
+                    if (i == index)
                     {
                         newArray[i] = element;
-                        for (int j = i+1; j < newArray.Length; j++)
+                        for (int j = i + 1; j < newArray.Length; j++)
                         {
                             newArray[j] = source[i];
                         }
                     }
                 }
-            }          
+            }
             return newArray;
-         
+
         }
 
         /// <summary>
@@ -167,33 +175,40 @@ namespace Hackaton
         /// <param name="count">The amount of parameters that will get copied</param>
         /// <author>Yasen Velinov</author>p
         public static void Copy(int[] sourceArray, int[] destinationArray, int count)
-            {
-                count = Math.Min(count, destinationArray.Length);
-                count = Math.Min(sourceArray.Length, count);
-                for (int i = 0; i < count; i++)
+        {
+            count = Math.Min(count, destinationArray.Length);
+            count = Math.Min(sourceArray.Length, count);
+            for (int i = 0; i < count; i++)
             {
                 destinationArray[i] = sourceArray[i];
             }
-            }
-            
+        }
+
         /// <summary>
-            /// Copy certain amount of int elements from an array from certain position onto another array from certain position
-            /// </summary>
-            /// <param name="sourceArray">The Array that will get copied</param>
-            /// <param name="sourceStartIndex">The position from which the elements shall get copied</param>
-            /// <param name="destinationArray"> The array the elements shall get copied onto </param>
-            /// <param name="destStartIndex">The position we shall paste the elements</param>
-            /// <param name="count">The ammount of elements that will get copied</param>
-            /// <autor>Yasen Velinov</autor>
+        /// Copy certain amount of int elements from an array from certain position onto another array from certain position
+        /// </summary>
+        /// <param name="sourceArray">The Array that will get copied</param>
+        /// <param name="sourceStartIndex">The position from which the elements shall get copied</param>
+        /// <param name="destinationArray"> The array the elements shall get copied onto </param>
+        /// <param name="destStartIndex">The position we shall paste the elements</param>
+        /// <param name="count">The ammount of elements that will get copied</param>
+        /// <autor>Yasen Velinov</autor>
+        
         public static void CopyFrom(int[] sourceArray, int sourceStartIndex, int[] destinationArray, int destStartIndex, int count)
-            {   
-                count = Math.Min(count, destinationArray.Length - destStartIndex);
-                count = Math.Min(sourceArray.Length - sourceStartIndex, count);
-                for (int i = 0; i < count; i++)
-                {
-                destinationArray[i-destStartIndex] = sourceArray[i-sourceStartIndex];
-                }
+        {
+            for (int i = sourceStartIndex; i < count; i++)
+            {
+                destinationArray[destStartIndex] = sourceArray[i];
+                destStartIndex++;
             }
+
+            //count = Math.Min(count, destinationArray.Length - destStartIndex);
+            //count = Math.Min(sourceArray.Length - sourceStartIndex, count);
+            //for (int i = 0; i < count; i++)
+            //{
+            //    destinationArray[i - destStartIndex] = sourceArray[i - sourceStartIndex];
+            //}
+        }
         /// <summary>
         /// Fills source with element.
         /// </summary>
@@ -246,7 +261,7 @@ namespace Hackaton
         {
             //Milen
             int result = -1;
-            if(source.Length != 0)
+
             for (int i = 0; i < source.Length; i++)
             {
                 if (source[i] == target && i != 0)
@@ -258,10 +273,8 @@ namespace Hackaton
                     result = -1;
                 }
             }
-            
+
             return result;
-            // Remove the line below then add your implementation.
-            throw new NotImplementedException("Error: LastIndexOf is not implemented!");
         }
 
         /// <summary>
@@ -320,7 +333,7 @@ namespace Hackaton
         /// <returns>A new array starting from startIndex and until endIndex.</returns>
         /// <author>Ivan Uzunov</author>
         public static int[] Section(int[] source, int startIndex, int endIndex)
-        {  
+        {
             List<int> newSource = new List<int>();
             if (endIndex < source.Length && startIndex < endIndex)
             {
